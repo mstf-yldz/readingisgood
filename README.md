@@ -13,6 +13,8 @@ I have to skip tests when building docker image because maven cannot access mong
 When you take build with maven if you change the hostname to mongo://localhost:27017/local it can run tests and build successfully.
 The problem is only with docker build.
 
+for api spesification: http://localhost:8080/swagger-ui.html
+
 ### Guides
 The following guides illustrate how to use some features concretely:
 
