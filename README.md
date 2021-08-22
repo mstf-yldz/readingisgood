@@ -44,7 +44,7 @@ http://localhost:8080/author/add (POST REQUEST)
 }
 >> add a new book (POST REQUEST)
 {
-	"title": "Taaşşuk-ı Fitnat",
+	"title": "Ömer in Çocukluğu",
 	"price":12,
 	"author":{
 		"id":1
