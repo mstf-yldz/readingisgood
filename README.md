@@ -6,6 +6,7 @@ Online Book Stock App Wtih Spring Boot Data Rest MVC Security
 to run in docker run following commands:
 
 mvnw -Dmaven.test.skip=true spring-boot:build-image -Dspring-boot.build-image.imageName=springio/readingisgood-docker
+
 docker run -p 8080:8080 -t springio/readingisgood-docker
 
 I have to skip tests when building docker image because maven cannot access mongodb when my hostname is mongo://mongo:27017.
