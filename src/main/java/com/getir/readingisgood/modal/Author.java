@@ -5,6 +5,9 @@ import javax.validation.constraints.Size;
 
 import org.springframework.data.annotation.Id;
 
+import io.swagger.annotations.ApiModel;
+
+@ApiModel(value = "User Api model documentation", description = "Model")
 public class Author {
 	public static final String SEQUENCE_NAME = "author_sequence";
 

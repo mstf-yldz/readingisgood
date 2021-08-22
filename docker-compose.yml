@@ -5,13 +5,10 @@ services:
     restart: always
     ports:
       - 8080:8080
-    container
     links:
-      - mongo:app_db
-  mongo:
+      - mongo_db:app_db
+  mongo_db:
     image: "mongo:4.4.3"
     restart: always
     ports:
       - 27017:27017
-    hostname:
-      - mongo
