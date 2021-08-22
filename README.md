@@ -3,14 +3,13 @@ Online Book Stock App Wtih Spring Boot Data Rest MVC Security
 
 # Getting Started
 
-### Reference Documentation
-For further reference, please consider the following sections:
+to run in docker run following commands:
+mvnw -Dmaven.test.skip=true spring-boot:build-image -Dspring-boot.build-image.imageName=springio/readingisgood-docker
+docker run -p 8080:8080 -t springio/readingisgood-docker
 
-* [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
-* [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/2.5.4/maven-plugin/reference/html/)
-* [Create an OCI image](https://docs.spring.io/spring-boot/docs/2.5.4/maven-plugin/reference/html/#build-image)
-* [Spring Web](https://docs.spring.io/spring-boot/docs/2.5.4/reference/htmlsingle/#boot-features-developing-web-applications)
-* [Spring Data JPA](https://docs.spring.io/spring-boot/docs/2.5.4/reference/htmlsingle/#boot-features-jpa-and-spring-data)
+I have to skip tests when building docker image because maven cannot access mongodb when my hostname is mongo://mongo:27017.
+When you take build with maven if you change the hostname to mongo://localhost:27017/local it can run tests and build successfully.
+The problem is only with docker build.
 
 ### Guides
 The following guides illustrate how to use some features concretely:
