@@ -1,16 +1,15 @@
 # readingisgood
-Online Book Stock App Wtih Spring Boot Data Rest MVC Security
+Online Book Stock App Wtih Spring Boot Data Rest MVC Security and Jwt
 
 # Getting Started
 
-### Reference Documentation
-For further reference, please consider the following sections:
+to run in docker run following commands:
 
-* [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
-* [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/2.5.4/maven-plugin/reference/html/)
-* [Create an OCI image](https://docs.spring.io/spring-boot/docs/2.5.4/maven-plugin/reference/html/#build-image)
-* [Spring Web](https://docs.spring.io/spring-boot/docs/2.5.4/reference/htmlsingle/#boot-features-developing-web-applications)
-* [Spring Data JPA](https://docs.spring.io/spring-boot/docs/2.5.4/reference/htmlsingle/#boot-features-jpa-and-spring-data)
+mvnw -Dmaven.test.skip=true spring-boot:build-image -Dspring-boot.build-image.imageName=springio/readingisgood-docker
+
+docker run -p 8080:8080 -t springio/readingisgood-docker
+
+for api spesification: http://localhost:8080/swagger-ui.html
 
 ### Guides
 The following guides illustrate how to use some features concretely:
